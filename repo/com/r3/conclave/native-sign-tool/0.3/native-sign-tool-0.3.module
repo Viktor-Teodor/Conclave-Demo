@@ -1,0 +1,61 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.r3.conclave",
+    "module": "native-sign-tool",
+    "version": "0.3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.4.1",
+      "buildId": "gevxuybc4nac7dmfyxlry26xfq"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "native-sign-tool-0.3.jar",
+          "url": "native-sign-tool-0.3.jar",
+          "size": 4732216,
+          "sha512": "e7391e9c7779d916e20c54e109bb1620eb4da1d5046530ddec893fec5a6b39d4a5157734cf1db473f60e88f1c3bd2f7651069ae2e4daa53ba1a959fc0c7a0e75",
+          "sha256": "f11f56e09829913f27b44521818ed34bc2b7903743770a930d822f6ab7061f1e",
+          "sha1": "2f79898c35f02571af04a9c1940d1ee5fda6a295",
+          "md5": "c10abbc7d24fcd2758d3cc93c167b60a"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "native-sign-tool-0.3.jar",
+          "url": "native-sign-tool-0.3.jar",
+          "size": 4732216,
+          "sha512": "e7391e9c7779d916e20c54e109bb1620eb4da1d5046530ddec893fec5a6b39d4a5157734cf1db473f60e88f1c3bd2f7651069ae2e4daa53ba1a959fc0c7a0e75",
+          "sha256": "f11f56e09829913f27b44521818ed34bc2b7903743770a930d822f6ab7061f1e",
+          "sha1": "2f79898c35f02571af04a9c1940d1ee5fda6a295",
+          "md5": "c10abbc7d24fcd2758d3cc93c167b60a"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.r3.conclave",
+    "module": "linux-sgx-debug",
+    "version": "0.3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.4.1",
+      "buildId": "gevxuybc4nac7dmfyxlry26xfq"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "linux-sgx-debug-0.3.jar",
+          "url": "linux-sgx-debug-0.3.jar",
+          "size": 7237719,
+          "sha512": "155a9ec010c2b85b8da0023a94d1f9e6123feff2b1f61dd0ad20db6dec3e7f5d8ce22cfdc729dbc7e4becfb5934d27fd58b9e27fef4d82ee984f76d1fca44528",
+          "sha256": "70ec44c669035fea9a26534a882d0844c9651a1c9bc513524d03e652bc50213f",
+          "sha1": "0ea9f9d4fdc41861617a22244bf8af80b38469e8",
+          "md5": "f79c50195864f9d673524a0e61893580"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "linux-sgx-debug-0.3.jar",
+          "url": "linux-sgx-debug-0.3.jar",
+          "size": 7237719,
+          "sha512": "155a9ec010c2b85b8da0023a94d1f9e6123feff2b1f61dd0ad20db6dec3e7f5d8ce22cfdc729dbc7e4becfb5934d27fd58b9e27fef4d82ee984f76d1fca44528",
+          "sha256": "70ec44c669035fea9a26534a882d0844c9651a1c9bc513524d03e652bc50213f",
+          "sha1": "0ea9f9d4fdc41861617a22244bf8af80b38469e8",
+          "md5": "f79c50195864f9d673524a0e61893580"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.r3.conclave",
+    "module": "plugin-enclave-gradle",
+    "version": "0.3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.4.1",
+      "buildId": "gevxuybc4nac7dmfyxlry26xfq"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "plugin-enclave-gradle-0.3.jar",
+          "url": "plugin-enclave-gradle-0.3.jar",
+          "size": 103448,
+          "sha512": "2cbbc8707b7c8d5fe1fb387b9f241193449a94a13d3475d68be9068c83f82292290eed503b9868e6e882f43583a3febc0bff0b777fe603965bf77ce9f4ebc13d",
+          "sha256": "f7cc269281777e6052224992fb0c8ff23d24199a92737fe96f5fb53781ec962b",
+          "sha1": "8a9be753cd51f333ee5320eb98746a86cfc5488d",
+          "md5": "21eaa70686098fe7177014ef9740abb4"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.jengelman.gradle.plugins",
+          "module": "shadow",
+          "version": {
+            "requires": "5.2.0"
+          },
+          "excludes": [
+            {
+              "group": "commons-logging",
+              "module": "commons-logging"
+            }
+          ]
+        },
+        {
+          "group": "io.github.classgraph",
+          "module": "classgraph",
+          "version": {
+            "requires": "4.8.69"
+          },
+          "excludes": [
+            {
+              "group": "commons-logging",
+              "module": "commons-logging"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "plugin-enclave-gradle-0.3.jar",
+          "url": "plugin-enclave-gradle-0.3.jar",
+          "size": 103448,
+          "sha512": "2cbbc8707b7c8d5fe1fb387b9f241193449a94a13d3475d68be9068c83f82292290eed503b9868e6e882f43583a3febc0bff0b777fe603965bf77ce9f4ebc13d",
+          "sha256": "f7cc269281777e6052224992fb0c8ff23d24199a92737fe96f5fb53781ec962b",
+          "sha1": "8a9be753cd51f333ee5320eb98746a86cfc5488d",
+          "md5": "21eaa70686098fe7177014ef9740abb4"
+        }
+      ]
+    }
+  ]
+}

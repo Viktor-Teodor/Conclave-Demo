@@ -1,0 +1,121 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.r3.conclave",
+    "module": "enclave-testing",
+    "version": "0.3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.4.1",
+      "buildId": "gevxuybc4nac7dmfyxlry26xfq"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.r3.conclave",
+          "module": "conclave-enclave",
+          "version": {
+            "requires": "0.3"
+          },
+          "excludes": [
+            {
+              "group": "commons-logging",
+              "module": "commons-logging"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "enclave-testing-0.3.jar",
+          "url": "enclave-testing-0.3.jar",
+          "size": 14765,
+          "sha512": "39ab4b9ce78eddc976d5137dfb829a8095eeda4bf9c0fbe6acb1399f5931449613d0cce020fc5bde66b854086f61fd124a53dec9a9ae2d0ce2913621daa25fa9",
+          "sha256": "ed4da63ab5bda084ce6795c79b0830cd0d909bf8b1b2287424eb3259e4de0272",
+          "sha1": "21d84d95b74a69b77d6af6a88e4adf9f6b139a7e",
+          "md5": "d954e753ac9dcd81f93f4e59a3f0f9dc"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.r3.conclave",
+          "module": "conclave-host",
+          "version": {
+            "requires": "0.3"
+          },
+          "excludes": [
+            {
+              "group": "commons-logging",
+              "module": "commons-logging"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.3.61"
+          },
+          "excludes": [
+            {
+              "group": "commons-logging",
+              "module": "commons-logging"
+            }
+          ]
+        },
+        {
+          "group": "com.r3.conclave",
+          "module": "conclave-enclave",
+          "version": {
+            "requires": "0.3"
+          },
+          "excludes": [
+            {
+              "group": "commons-logging",
+              "module": "commons-logging"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "enclave-testing-0.3.jar",
+          "url": "enclave-testing-0.3.jar",
+          "size": 14765,
+          "sha512": "39ab4b9ce78eddc976d5137dfb829a8095eeda4bf9c0fbe6acb1399f5931449613d0cce020fc5bde66b854086f61fd124a53dec9a9ae2d0ce2913621daa25fa9",
+          "sha256": "ed4da63ab5bda084ce6795c79b0830cd0d909bf8b1b2287424eb3259e4de0272",
+          "sha1": "21d84d95b74a69b77d6af6a88e4adf9f6b139a7e",
+          "md5": "d954e753ac9dcd81f93f4e59a3f0f9dc"
+        }
+      ]
+    }
+  ]
+}

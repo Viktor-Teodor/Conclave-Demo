@@ -1,0 +1,61 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.r3.conclave",
+    "module": "native-substratevm-simulation",
+    "version": "0.3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.4.1",
+      "buildId": "gevxuybc4nac7dmfyxlry26xfq"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "native-substratevm-simulation-0.3.jar",
+          "url": "native-substratevm-simulation-0.3.jar",
+          "size": 710376,
+          "sha512": "50960159e68c6af25c695859848406992e4fe3aac396b4f1b821c9678f879f8770f484ad0767bc694f28660f52e16ae9427feace9bc57b12dab05b538f922c60",
+          "sha256": "dd6a3d1832e1e30147bee67bc718c089ccc919ee30303781a4304d29cafeb4a0",
+          "sha1": "a83a0b5455402026c7909f7daf78fab155f2b1c7",
+          "md5": "7f73f5357579e68e4becfa024d02a271"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "native-substratevm-simulation-0.3.jar",
+          "url": "native-substratevm-simulation-0.3.jar",
+          "size": 710376,
+          "sha512": "50960159e68c6af25c695859848406992e4fe3aac396b4f1b821c9678f879f8770f484ad0767bc694f28660f52e16ae9427feace9bc57b12dab05b538f922c60",
+          "sha256": "dd6a3d1832e1e30147bee67bc718c089ccc919ee30303781a4304d29cafeb4a0",
+          "sha1": "a83a0b5455402026c7909f7daf78fab155f2b1c7",
+          "md5": "7f73f5357579e68e4becfa024d02a271"
+        }
+      ]
+    }
+  ]
+}

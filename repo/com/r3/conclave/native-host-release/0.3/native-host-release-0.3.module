@@ -1,0 +1,61 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.r3.conclave",
+    "module": "native-host-release",
+    "version": "0.3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.4.1",
+      "buildId": "gevxuybc4nac7dmfyxlry26xfq"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "native-host-release-0.3.jar",
+          "url": "native-host-release-0.3.jar",
+          "size": 2203325,
+          "sha512": "436552da118b93aa4e5ce09919fc7b1a9cc119c1cf9310910b32b04af6889edae94afaf55c23135785fa4692b3e1d4412d98e308b5b8aaac39344affcbf452b7",
+          "sha256": "0004992b262d60353dc4c36de0a40b26989ff2a19c5ae1d9423f96d69d8b8920",
+          "sha1": "f04dec2807a922c28b5d7dc146eada809e620dc1",
+          "md5": "1525b4a85229aff5491c56a216cf6357"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "native-host-release-0.3.jar",
+          "url": "native-host-release-0.3.jar",
+          "size": 2203325,
+          "sha512": "436552da118b93aa4e5ce09919fc7b1a9cc119c1cf9310910b32b04af6889edae94afaf55c23135785fa4692b3e1d4412d98e308b5b8aaac39344affcbf452b7",
+          "sha256": "0004992b262d60353dc4c36de0a40b26989ff2a19c5ae1d9423f96d69d8b8920",
+          "sha1": "f04dec2807a922c28b5d7dc146eada809e620dc1",
+          "md5": "1525b4a85229aff5491c56a216cf6357"
+        }
+      ]
+    }
+  ]
+}
