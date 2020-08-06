@@ -5,14 +5,14 @@ import com.r3.conclave.common.EnclaveMode;
 import com.r3.conclave.common.OpaqueBytes;
 import com.r3.conclave.host.EnclaveHost;
 import com.r3.conclave.host.EnclaveLoadException;
-
 import javax.net.ServerSocketFactory;
+import javax.net.SocketFactory;
 import javax.net.ssl.SSLServerSocketFactory;
+import javax.net.ssl.SSLSocketFactory;
 import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.net.MulticastSocket;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.ByteBuffer;
@@ -21,6 +21,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicReference;
 
+//The host receives prices from 3 sellers and sends the average back to the sellers and 3 other parties
 public class Host {
     public static void main(String[] args) throws EnclaveLoadException {
 
@@ -47,29 +48,22 @@ public class Host {
                 }
             });
 
-            System.out.println(callEnclave(enclave, "Hello world!"));
-            // !dlrow olleH      :-)
-
 
             final EnclaveInstanceInfo attestation = enclave.getEnclaveInstanceInfo();
             final byte[] attestationBytes = attestation.serialize();
-            System.out.println(EnclaveInstanceInfo.deserialize(attestationBytes));
 
+            List<Double> prices = new ArrayList<>();
 
             //In order to get the price from multiple parties, I will just use a for loop and open the connection for each
             int numberOfConnections = 3;
-
 
             // That's not very useful by itself. Enclaves only get interesting when remote clients can talk to them.
             // So now let's open a TCP socket and implement a trivial protocol that lets a remote client use it.
             int port = 9999;
             System.out.println("Listening on port " + port + ". Use the client app to send strings for reversal.");
 
-            List<Double> prices = new ArrayList<>();
-
             for (int index = 1; index <= numberOfConnections; ++index) {
                 try {
-
                     ServerSocketFactory acceptorFactory = SSLServerSocketFactory.getDefault();
                     ServerSocket acceptor = acceptorFactory.createServerSocket(port);
                     Socket connection = acceptor.accept();
@@ -87,7 +81,6 @@ public class Host {
 
                     prices.add(ByteBuffer.wrap(mailBytes).getDouble());
 
-
                     // Closing the output stream closes the connection. Different clients will block each other but this
                     // is just a hello world sample.
                     output.close();
@@ -98,7 +91,6 @@ public class Host {
 
             // Deliver it. The enclave will give us some mail to reply with via the callback we passed in
             // to the start() method.
-
             byte[] bytes = new byte[prices.size() * Double.BYTES];
             for (int i = 0; i < prices.size(); i++)
                 System.arraycopy(doubleToByteArray(prices.get(i)), 0, bytes, i * Double.BYTES, Double.BYTES);
@@ -113,14 +105,6 @@ public class Host {
         }
     }
 
-    public static String callEnclave(EnclaveHost enclave, String input) {
-
-        // We'll convert strings to bytes and back.
-        final byte[] inputBytes = input.getBytes();
-
-        final byte[] outputBytes = Objects.requireNonNull(enclave.callEnclave(inputBytes));
-        return new String(outputBytes);
-    }
 
     private static byte[] doubleToByteArray ( final double i ) throws IOException {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
@@ -132,14 +116,18 @@ public class Host {
 
     private static void sendAverageBackToUsers(byte[] toSend) throws IOException {
 
-        int port = 9999;
-        ServerSocketFactory acceptorFactory = SSLServerSocketFactory.getDefault();
-        ServerSocket acceptor = acceptorFactory.createServerSocket(port);
-        Socket connection = acceptor.accept();
+        //we will connect back to those that need the average
+        int[] ports = new int[]{ 9998, 9997, 9996, 9995, 9994, 9993};
+        String host = "127:0.0.1";
 
-        DataOutputStream output = new DataOutputStream(connection.getOutputStream());
-        output.writeInt(toSend.length);
-        output.write(toSend);
+        for(int port : ports){
+            SocketFactory acceptorFactory = SSLSocketFactory.getDefault();
+            Socket connection = acceptorFactory.createSocket(host, port);
+
+            DataOutputStream output = new DataOutputStream(connection.getOutputStream());
+            output.writeInt(toSend.length);
+            output.write(toSend);
+        }
 
     }
 }
