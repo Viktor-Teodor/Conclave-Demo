@@ -21,6 +21,7 @@ pluginManagement {
 
 include 'enclave'
 include 'host'
-
-
+include 'webApp'
+include 'communicatino'
+include 'Communication'
 

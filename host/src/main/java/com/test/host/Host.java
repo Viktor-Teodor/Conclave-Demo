@@ -5,6 +5,7 @@ import com.r3.conclave.common.EnclaveMode;
 import com.r3.conclave.common.OpaqueBytes;
 import com.r3.conclave.host.EnclaveHost;
 import com.r3.conclave.host.EnclaveLoadException;
+
 import javax.net.ServerSocketFactory;
 import javax.net.SocketFactory;
 import javax.net.ssl.SSLServerSocketFactory;
@@ -18,12 +19,12 @@ import java.net.Socket;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.atomic.AtomicReference;
 
 //The host receives prices from 3 sellers and sends the average back to the sellers and 3 other parties
 public class Host {
     public static void main(String[] args) throws EnclaveLoadException {
+
 
         try {
             EnclaveHost.checkPlatformSupportsEnclaves(true);
@@ -59,12 +60,12 @@ public class Host {
 
             // That's not very useful by itself. Enclaves only get interesting when remote clients can talk to them.
             // So now let's open a TCP socket and implement a trivial protocol that lets a remote client use it.
-            int port = 9999;
+            int port = 9000;
             System.out.println("Listening on port " + port + ". Use the client app to send strings for reversal.");
 
             for (int index = 1; index <= numberOfConnections; ++index) {
                 try {
-                    ServerSocketFactory acceptorFactory = SSLServerSocketFactory.getDefault();
+                    ServerSocketFactory acceptorFactory = ServerSocketFactory.getDefault();
                     ServerSocket acceptor = acceptorFactory.createServerSocket(port);
                     Socket connection = acceptor.accept();
 
@@ -84,6 +85,7 @@ public class Host {
                     // Closing the output stream closes the connection. Different clients will block each other but this
                     // is just a hello world sample.
                     output.close();
+                    acceptor.close();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -117,11 +119,11 @@ public class Host {
     private static void sendAverageBackToUsers(byte[] toSend) throws IOException {
 
         //we will connect back to those that need the average
-        int[] ports = new int[]{ 9998, 9997, 9996, 9995, 9994, 9993};
+        int[] ports = new int[]{ 9992, 9991, 9990};
         String host = "127:0.0.1";
 
         for(int port : ports){
-            SocketFactory acceptorFactory = SSLSocketFactory.getDefault();
+            SocketFactory acceptorFactory = SocketFactory.getDefault();
             Socket connection = acceptorFactory.createSocket(host, port);
 
             DataOutputStream output = new DataOutputStream(connection.getOutputStream());

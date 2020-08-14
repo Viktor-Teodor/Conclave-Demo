@@ -29,6 +29,9 @@ if "%DIRNAME%" == "" set DIRNAME=.
 set APP_BASE_NAME=%~n0
 set APP_HOME=%DIRNAME%..
 
+@rem Resolve any "." and ".." in APP_HOME to make it shorter.
+for %%i in ("%APP_HOME%") do set APP_HOME=%%~fi
+
 @rem Add default JVM options here. You can also use JAVA_OPTS and HOST_OPTS to pass JVM options to this script.
 set DEFAULT_JVM_OPTS=
 
@@ -80,6 +83,7 @@ set CMD_LINE_ARGS=%*
 @rem Setup the command line
 
 set CLASSPATH=%APP_HOME%\lib\host.jar;%APP_HOME%\lib\conclave-host-0.3.jar;%APP_HOME%\lib\enclave-signed-so-simulation.jar;%APP_HOME%\lib\slf4j-simple-1.7.30.jar;%APP_HOME%\lib\conclave-common-0.3.jar;%APP_HOME%\lib\native-host-shared-0.3.jar;%APP_HOME%\lib\conclave-mail-0.3.jar;%APP_HOME%\lib\kotlin-stdlib-jdk8-1.3.61.jar;%APP_HOME%\lib\classgraph-4.8.69.jar;%APP_HOME%\lib\slf4j-api-1.7.30.jar;%APP_HOME%\lib\jackson-module-kotlin-2.10.2.jar;%APP_HOME%\lib\jackson-datatype-jsr310-2.10.2.jar;%APP_HOME%\lib\jackson-databind-2.10.2.jar;%APP_HOME%\lib\native-host-release-0.3.jar;%APP_HOME%\lib\native-host-debug-0.3.jar;%APP_HOME%\lib\native-host-simulation-0.3.jar;%APP_HOME%\lib\kotlin-stdlib-jdk7-1.3.61.jar;%APP_HOME%\lib\kotlin-reflect-1.3.61.jar;%APP_HOME%\lib\kotlin-stdlib-1.3.61.jar;%APP_HOME%\lib\jackson-annotations-2.10.2.jar;%APP_HOME%\lib\jackson-core-2.10.2.jar;%APP_HOME%\lib\eddsa-0.3.0.jar;%APP_HOME%\lib\kotlin-stdlib-common-1.3.61.jar;%APP_HOME%\lib\annotations-13.0.jar
+
 
 @rem Execute host
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %HOST_OPTS%  -classpath "%CLASSPATH%" com.test.host.Host %CMD_LINE_ARGS%

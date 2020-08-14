@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="br.com.uol.reconf:reconf-spring:2.1.16" type="repository">
+    <properties maven-id="br.com.uol.reconf:reconf-spring:2.1.16" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/br/com/uol/reconf/reconf-spring/2.1.16/reconf-spring-2.1.16.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/br/com/uol/reconf/reconf-client/2.1.16/reconf-client-2.1.16.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/br/com/uol/reconf/reconf-infra/2.1.16/reconf-infra-2.1.16.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-collections4/4.0/commons-collections4-4.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.10/commons-codec-1.10.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.4/commons-io-2.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-dbcp/commons-dbcp/1.4/commons-dbcp-1.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/hsqldb/hsqldb/2.3.3/hsqldb-2.3.3.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5/httpclient-4.5.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.2/commons-logging-1.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4/httpcore-4.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

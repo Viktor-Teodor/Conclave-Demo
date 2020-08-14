@@ -82,6 +82,7 @@ esac
 
 CLASSPATH=$APP_HOME/lib/host.jar:$APP_HOME/lib/conclave-host-0.3.jar:$APP_HOME/lib/enclave-signed-so-simulation.jar:$APP_HOME/lib/slf4j-simple-1.7.30.jar:$APP_HOME/lib/conclave-common-0.3.jar:$APP_HOME/lib/native-host-shared-0.3.jar:$APP_HOME/lib/conclave-mail-0.3.jar:$APP_HOME/lib/kotlin-stdlib-jdk8-1.3.61.jar:$APP_HOME/lib/classgraph-4.8.69.jar:$APP_HOME/lib/slf4j-api-1.7.30.jar:$APP_HOME/lib/jackson-module-kotlin-2.10.2.jar:$APP_HOME/lib/jackson-datatype-jsr310-2.10.2.jar:$APP_HOME/lib/jackson-databind-2.10.2.jar:$APP_HOME/lib/native-host-release-0.3.jar:$APP_HOME/lib/native-host-debug-0.3.jar:$APP_HOME/lib/native-host-simulation-0.3.jar:$APP_HOME/lib/kotlin-stdlib-jdk7-1.3.61.jar:$APP_HOME/lib/kotlin-reflect-1.3.61.jar:$APP_HOME/lib/kotlin-stdlib-1.3.61.jar:$APP_HOME/lib/jackson-annotations-2.10.2.jar:$APP_HOME/lib/jackson-core-2.10.2.jar:$APP_HOME/lib/eddsa-0.3.0.jar:$APP_HOME/lib/kotlin-stdlib-common-1.3.61.jar:$APP_HOME/lib/annotations-13.0.jar
 
+
 # Determine the Java command to use to start the JVM.
 if [ -n "$JAVA_HOME" ] ; then
     if [ -x "$JAVA_HOME/jre/sh/java" ] ; then
@@ -129,6 +130,7 @@ fi
 if [ "$cygwin" = "true" -o "$msys" = "true" ] ; then
     APP_HOME=`cygpath --path --mixed "$APP_HOME"`
     CLASSPATH=`cygpath --path --mixed "$CLASSPATH"`
+    
     JAVACMD=`cygpath --unix "$JAVACMD"`
 
     # We build the pattern for arguments to be converted via cygpath
